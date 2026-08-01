@@ -1,0 +1,9 @@
+streamlit
+sentence-transformers
+numpy
+pydantic
+python-dotenv
+requests
+PyYAML
+# Phase 6 graph renderer: select and add pyvis or streamlit components after evaluation.
+# Phase 2 optional extractors: add pypdf/python-docx only when needed.
