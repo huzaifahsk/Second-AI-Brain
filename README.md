@@ -26,7 +26,7 @@ The capture and processing commands will be added in later phases.
 
 The repository path may contain spaces; configuration uses absolute paths derived from `config.py`, so commands do not depend on the current working directory.
 
-## Planned workflow
+## Current workflow
 
 ```text
 python capture.py --text "A note to remember"
@@ -37,6 +37,16 @@ python link.py
 python build_graph.py
 streamlit run app.py
 ```
+
+### Phase 2 verification
+
+The capture CLI is implemented and tested. It writes immutable JSON records under raw/, copies file attachments into raw/attachments/, and preserves note, URL, and file metadata for later pipeline stages. A fresh run creates a new capture ID rather than overwriting the prior record.
+
+Verified example:
+
+- 10 real captures were written to raw/ using the CLI.
+- Notes, links, and files are all supported.
+- File captures store a relative attachment path and preserve the original material under raw/attachments/.
 
 ## Privacy and generated data
 

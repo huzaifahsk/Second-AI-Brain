@@ -29,7 +29,7 @@ def configure_logging(level: int = logging.INFO) -> logging.Logger:
         )
         logger.addHandler(handler)
     logger.setLevel(level)
-    return logger
+    return logger 
 
 
 def stage_log(logger: logging.Logger, stage: str, status: str, message: str, capture_id: str = "-") -> None:

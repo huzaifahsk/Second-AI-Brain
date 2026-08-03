@@ -34,6 +34,8 @@ class CaptureRecord(BaseModel):
     attachment_path: str | None = None
     content_sha256: str | None = Field(default=None, pattern=r"^[a-fA-F0-9]{64}$")
     schema_version: int = Field(default=1, ge=1)
+    mime_type: str | None = None
+    file_size: int | None = Field(default=None, ge=0)
 
     @model_validator(mode="after")
     def require_content_or_source(self) -> "CaptureRecord":
