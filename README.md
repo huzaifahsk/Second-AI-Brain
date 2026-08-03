@@ -53,3 +53,5 @@ Verified example:
 Never commit `.env`, API keys, private attachments, raw captures, or generated private indexes. Raw captures are intended to be immutable; later pipeline stages produce rebuildable derived artifacts. Public deployments should contain only sanitized data and should expose read/query behavior rather than write-capable capture commands.
 
 See [docs/architecture.md](docs/architecture.md), [docs/implementation-plan.md](docs/implementation-plan.md), and [docs/edge-case.md](docs/edge-case.md) for the design and delivery plan.
+
+# Updated README
